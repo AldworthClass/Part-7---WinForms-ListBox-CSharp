@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Part_7___WinForms_ListBox_CSharp
 {
-    public partial class Form1 : Form
+    public partial class frmListBoxes : Form
     {
         Random generator = new Random();
         List<int> numbers = new List<int>();
         List<string> heroes = new List<string>();
-        public Form1()
+        public frmListBoxes()
         {
             InitializeComponent();
         }
@@ -23,13 +23,16 @@ namespace Part_7___WinForms_ListBox_CSharp
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 30; i++)
                 numbers.Add(generator.Next(100));
             lstNumbers.DataSource = numbers;
 
-            numbers.Clear();
+        
         }
 
-     
+        private void LstNumbers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
