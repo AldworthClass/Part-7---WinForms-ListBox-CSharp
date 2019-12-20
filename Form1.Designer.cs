@@ -94,7 +94,7 @@
             this.btnRemoveAllNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveAllNumbers.Location = new System.Drawing.Point(191, 320);
             this.btnRemoveAllNumbers.Name = "btnRemoveAllNumbers";
-            this.btnRemoveAllNumbers.Size = new System.Drawing.Size(128, 29);
+            this.btnRemoveAllNumbers.Size = new System.Drawing.Size(128, 37);
             this.btnRemoveAllNumbers.TabIndex = 4;
             this.btnRemoveAllNumbers.Text = "Remove All";
             this.btnRemoveAllNumbers.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             this.btnAddHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddHero.Location = new System.Drawing.Point(494, 320);
             this.btnAddHero.Name = "btnAddHero";
-            this.btnAddHero.Size = new System.Drawing.Size(75, 29);
+            this.btnAddHero.Size = new System.Drawing.Size(75, 37);
             this.btnAddHero.TabIndex = 9;
             this.btnAddHero.Text = "Add";
             this.btnAddHero.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.btnRemoveNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveNumber.Location = new System.Drawing.Point(86, 320);
             this.btnRemoveNumber.Name = "btnRemoveNumber";
-            this.btnRemoveNumber.Size = new System.Drawing.Size(100, 29);
+            this.btnRemoveNumber.Size = new System.Drawing.Size(100, 37);
             this.btnRemoveNumber.TabIndex = 11;
             this.btnRemoveNumber.Text = "Remove";
             this.btnRemoveNumber.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             this.txtRemoveHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemoveHero.Location = new System.Drawing.Point(342, 388);
             this.txtRemoveHero.Name = "txtRemoveHero";
-            this.txtRemoveHero.Size = new System.Drawing.Size(119, 29);
+            this.txtRemoveHero.Size = new System.Drawing.Size(129, 29);
             this.txtRemoveHero.TabIndex = 14;
             // 
             // lblRemoveHero
@@ -208,9 +208,9 @@
             // btnRemoveHero
             // 
             this.btnRemoveHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveHero.Location = new System.Drawing.Point(468, 388);
+            this.btnRemoveHero.Location = new System.Drawing.Point(477, 385);
             this.btnRemoveHero.Name = "btnRemoveHero";
-            this.btnRemoveHero.Size = new System.Drawing.Size(101, 29);
+            this.btnRemoveHero.Size = new System.Drawing.Size(101, 37);
             this.btnRemoveHero.TabIndex = 16;
             this.btnRemoveHero.Text = "Remove";
             this.btnRemoveHero.UseVisualStyleBackColor = true;
@@ -224,6 +224,7 @@
             this.btnSortNumber.TabIndex = 17;
             this.btnSortNumber.Text = "Sort";
             this.btnSortNumber.UseVisualStyleBackColor = true;
+            this.btnSortNumber.Click += new System.EventHandler(this.BtnSortNumber_Click);
             // 
             // frmListBoxes
             // 
