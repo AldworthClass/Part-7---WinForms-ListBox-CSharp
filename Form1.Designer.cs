@@ -97,6 +97,7 @@
             this.btnRemoveAllNumbers.TabIndex = 4;
             this.btnRemoveAllNumbers.Text = "Remove All";
             this.btnRemoveAllNumbers.UseVisualStyleBackColor = true;
+            this.btnRemoveAllNumbers.Click += new System.EventHandler(this.BtnRemoveAllNumbers_Click);
             // 
             // btnNewNumbers
             // 

@@ -99,5 +99,24 @@ namespace Part_7___WinForms_ListBox_CSharp
             else
                 lblStatusUpdate.Text = "Status: heroe not found";
         }
+
+        private void BtnRemoveAllNumbers_Click(object sender, EventArgs e)
+        {
+            if (lstNumbers.SelectedIndex != -1)
+            {
+                int numRemoved = 0;
+                while (numbers.Remove((Int32)lstNumbers.SelectedItem))
+                    numRemoved++;
+                lstNumbers.DataSource = null;
+                lstNumbers.DataSource = numbers;
+                lblStatusUpdate.Text = $"Status: {numRemoved} item(s) removed";
+            }
+            else
+                lblStatusUpdate.Text = "Status: nothing to remove";
+
+
+            //This removes all items using a Predicate.  It returns the number of removed elements.
+            //numbers.RemoveAll(number => number == (Int32)lstNumbers.SelectedItem);
+        }
     }
 }
