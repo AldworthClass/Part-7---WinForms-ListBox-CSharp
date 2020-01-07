@@ -34,16 +34,70 @@ namespace Part_7___WinForms_ListBox_CSharp
         
         }
 
-        private void LstNumbers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void BtnSortNumber_Click(object sender, EventArgs e)
         {
             numbers.Sort();
             lstNumbers.DataSource = null;
             lstNumbers.DataSource = numbers;
+            lblStatusUpdate.Text = "Status: numbers sorted";
+        }
+
+        private void BtnNewNumbers_Click(object sender, EventArgs e)
+        {
+            numbers.Clear();
+            for (int i = 0; i < 30; i++)
+                numbers.Add(generator.Next(100));
+            lstNumbers.DataSource = null;
+            lstNumbers.DataSource = numbers;
+            lblStatusUpdate.Text = "Status: new number list";
+        }
+
+        private void BtnSortHero_Click(object sender, EventArgs e)
+        {
+            heroes.Sort();
+            lstHeroes.DataSource = null;
+            lstHeroes.DataSource = heroes;
+            lblStatusUpdate.Text = "Status: heroes sorted";
+        }
+
+        private void BtnClearHeroes_Click(object sender, EventArgs e)
+        {
+            heroes.Clear();
+            heroes.Add("Superman");
+            heroes.Add("Batman");
+            lstHeroes.DataSource = null;
+            lstHeroes.DataSource = heroes;
+            lblStatusUpdate.Text = "Status: new hero list";
+        }
+
+        private void BtnRemoveNumber_Click(object sender, EventArgs e)
+        {
+            //Make sure that something is selected in ListBox
+            if (lstNumbers.SelectedIndex != -1)
+            {
+                //numbers.Remove((Int32)lstNumbers.SelectedItem);   Remove by value
+                numbers.RemoveAt(lstNumbers.SelectedIndex);       //Remove by index
+                lstNumbers.DataSource = null;
+                lstNumbers.DataSource = numbers;
+                lblStatusUpdate.Text = "Status: item removed";
+            }
+            else
+                lblStatusUpdate.Text = "Status: no item selected";
+            
+        }
+
+        private void BtnRemoveHero_Click(object sender, EventArgs e)
+        {
+            string removeHeroe = txtRemoveHero.Text.Trim();
+            if (heroes.Remove(removeHeroe))
+            {
+                lstHeroes.DataSource = null;
+                lstHeroes.DataSource = heroes;
+                lblStatusUpdate.Text = "Status: item removed";
+            }
+            else
+                lblStatusUpdate.Text = "Status: heroe not found";
         }
     }
 }
