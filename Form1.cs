@@ -31,10 +31,8 @@ namespace Part_7___WinForms_ListBox_CSharp
             heroes.Add("Superman");
             heroes.Add("Batman");
             lstHeroes.DataSource = heroes;
-        
         }
 
-     
         private void BtnSortNumber_Click(object sender, EventArgs e)
         {
             numbers.Sort();
@@ -101,7 +99,7 @@ namespace Part_7___WinForms_ListBox_CSharp
 
         private void BtnRemoveAllNumbers_Click(object sender, EventArgs e)
         {
-            if (lstNumbers.SelectedIndex != -1)
+            if (lstNumbers.SelectedIndex != -1)//Verifies that an item is selected
             {
                 int numRemoved = 0;
                 while (numbers.Remove((Int32)lstNumbers.SelectedItem))
@@ -111,9 +109,7 @@ namespace Part_7___WinForms_ListBox_CSharp
                 lblStatusUpdate.Text = $"Status: {numRemoved} item(s) removed";
             }
             else
-                lblStatusUpdate.Text = "Status: nothing to remove";
-
-
+                lblStatusUpdate.Text = "Status: nothing to remove";           
             //This removes all items using a Predicate.  It returns the number of removed elements.
             //numRemoved = numbers.RemoveAll(number => number == (Int32)lstNumbers.SelectedItem);
         }
