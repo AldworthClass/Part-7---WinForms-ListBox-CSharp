@@ -84,7 +84,6 @@ namespace Part_7___WinForms_ListBox_CSharp
             }
             else
                 lblStatusUpdate.Text = "Status: no item selected";
-            
         }
 
         private void BtnRemoveHero_Click(object sender, EventArgs e)
@@ -116,7 +115,22 @@ namespace Part_7___WinForms_ListBox_CSharp
 
 
             //This removes all items using a Predicate.  It returns the number of removed elements.
-            //numbers.RemoveAll(number => number == (Int32)lstNumbers.SelectedItem);
+            //numRemoved = numbers.RemoveAll(number => number == (Int32)lstNumbers.SelectedItem);
+        }
+
+        private void BtnAddHero_Click(object sender, EventArgs e)
+        {
+            string addHero = txtAddHero.Text.Trim();
+            if (addHero.Length > 0)
+            {
+                heroes.Add(addHero);
+                txtAddHero.Text = "";
+                lstHeroes.DataSource = null;
+                lstHeroes.DataSource = heroes;
+                lblStatusUpdate.Text = "Status: item removed";
+            }
+            else
+                lblStatusUpdate.Text = "Status: no hero to add";
         }
     }
 }

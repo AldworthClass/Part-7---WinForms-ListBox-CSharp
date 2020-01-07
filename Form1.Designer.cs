@@ -142,12 +142,13 @@
             // btnAddHero
             // 
             this.btnAddHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddHero.Location = new System.Drawing.Point(494, 320);
+            this.btnAddHero.Location = new System.Drawing.Point(494, 316);
             this.btnAddHero.Name = "btnAddHero";
             this.btnAddHero.Size = new System.Drawing.Size(75, 37);
             this.btnAddHero.TabIndex = 9;
             this.btnAddHero.Text = "Add";
             this.btnAddHero.UseVisualStyleBackColor = true;
+            this.btnAddHero.Click += new System.EventHandler(this.BtnAddHero_Click);
             // 
             // btnSortHero
             // 
@@ -212,7 +213,7 @@
             // btnRemoveHero
             // 
             this.btnRemoveHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveHero.Location = new System.Drawing.Point(477, 385);
+            this.btnRemoveHero.Location = new System.Drawing.Point(477, 384);
             this.btnRemoveHero.Name = "btnRemoveHero";
             this.btnRemoveHero.Size = new System.Drawing.Size(101, 37);
             this.btnRemoveHero.TabIndex = 16;
