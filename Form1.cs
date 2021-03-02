@@ -87,6 +87,9 @@ namespace Part_7___WinForms_ListBox_CSharp
         private void BtnRemoveHero_Click(object sender, EventArgs e)
         {
             string removeHeroe = txtRemoveHero.Text.Trim();
+            
+            lstHeroes.DataSource = null;
+            lstHeroes.DataSource = heroes;
             if (heroes.Remove(removeHeroe))
             {
                 lstHeroes.DataSource = null;
@@ -95,6 +98,9 @@ namespace Part_7___WinForms_ListBox_CSharp
             }
             else
                 lblStatusUpdate.Text = "Status: heroe not found";
+            // Removes all instances with a predicate
+            // heroes.RemoveAll(hero => hero.ToLower() == removeHeroe.ToLower());
+
         }
 
         private void BtnRemoveAllNumbers_Click(object sender, EventArgs e)
